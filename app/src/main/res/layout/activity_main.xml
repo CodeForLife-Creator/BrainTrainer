@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b2ebf2"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnGo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00e676"
+        android:onClick="startGame"
+        android:padding="100dp"
+        android:text="GO"
+        android:textSize="60dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout2"
+        android:layout_width="411dp"
+        android:layout_height="603dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="16dp"
+            android:text="30s"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginRight="36dp"
+            android:text="0/0"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvProblem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="177dp"
+            android:layout_marginLeft="177dp"
+            android:layout_marginTop="76dp"
+            android:layout_marginEnd="176dp"
+            android:layout_marginRight="176dp"
+            android:text="3 + 7"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="177dp"
+            android:layout_marginLeft="177dp"
+            android:layout_marginEnd="176dp"
+            android:layout_marginRight="176dp"
+            android:layout_marginBottom="68dp"
+            android:text="Correct!"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="34dp"
+            app:columnCount="2"
+            app:layout_constraintBottom_toTopOf="@+id/tvResult"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvProblem"
+            app:layout_constraintVertical_weight="2"
+            app:rowCount="2">
+
+            <Button
+                android:id="@+id/button0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ea80fc"
+                android:onClick="chooseAnswer"
+                android:padding="60sp"
+                android:tag="0"
+                android:text="Button"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_column="0"
+                app:layout_gravity="fill_horizontal|fill_vertical"
+                app:layout_row="0" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffd740"
+                android:onClick="chooseAnswer"
+                android:padding="60sp"
+                android:tag="1"
+                android:text="Button"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_column="1"
+                app:layout_gravity="fill_horizontal|fill_vertical"
+                app:layout_row="0" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#18ffff"
+                android:onClick="chooseAnswer"
+                android:padding="60sp"
+                android:tag="2"
+                android:text="Button"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_column="0"
+                app:layout_gravity="fill_horizontal|fill_vertical"
+                app:layout_row="1" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#76ff03"
+                android:onClick="chooseAnswer"
+                android:padding="60sp"
+                android:tag="3"
+                android:text="Button"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_column="1"
+                app:layout_gravity="fill_horizontal|fill_vertical"
+                app:layout_row="1" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <Button
+            android:id="@+id/btnPlayAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:onClick="playAgain"
+            android:text="Play Again?"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="invisible" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
